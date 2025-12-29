@@ -115,7 +115,8 @@ for (const item of targets) {
   console.log(`building ${name}`)
   await $`mkdir -p dist/${name}/bin`
 
-  const parserWorker = require.resolve("@opentui/core/parser.worker")
+  const opentuiCorePath = path.dirname(require.resolve("@opentui/core"))
+  const parserWorker = path.join(opentuiCorePath, "parser.worker.js")
   const workerPath = "./src/cli/cmd/tui/worker.ts"
 
   // Use platform-specific bunfs root path based on target OS
