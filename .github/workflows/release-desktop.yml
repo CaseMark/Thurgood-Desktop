@@ -93,6 +93,7 @@ jobs:
             cp "packages/opencode/dist/${{ matrix.cli-binary }}/bin/opencode.exe" "packages/desktop/src-tauri/sidecars/thurgood-cli-${{ matrix.target }}.exe"
           else
             cp "packages/opencode/dist/${{ matrix.cli-binary }}/bin/opencode" "packages/desktop/src-tauri/sidecars/thurgood-cli-${{ matrix.target }}"
+            chmod +x "packages/desktop/src-tauri/sidecars/thurgood-cli-${{ matrix.target }}"
           fi
 
       - name: Build desktop app
