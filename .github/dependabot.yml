@@ -1,0 +1,47 @@
+version: 2
+updates:
+  - package-ecosystem: "bun"
+    directories:
+      - "/"
+      - "/github"
+      - "/packages/app"
+      - "/packages/console/app"
+      - "/packages/console/core"
+      - "/packages/console/function"
+      - "/packages/console/mail"
+      - "/packages/console/resource"
+      - "/packages/desktop"
+      - "/packages/enterprise"
+      - "/packages/function"
+      - "/packages/opencode"
+      - "/packages/plugin"
+      - "/packages/script"
+      - "/packages/sdk/js"
+      - "/packages/slack"
+      - "/packages/thurgood-auth"
+      - "/packages/ui"
+      - "/packages/util"
+      - "/packages/web"
+      - "/sdks/vscode"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    open-pull-requests-limit: 5
+  - package-ecosystem: "cargo"
+    directory: "/packages/desktop/src-tauri"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    open-pull-requests-limit: 5
+  - package-ecosystem: "docker"
+    directory: "/packages/opencode"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    open-pull-requests-limit: 5
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    open-pull-requests-limit: 5
